@@ -22,4 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Printing Custom Message
     steps:
+      - name: My first step
+        if: ${{ inputs.run_job }}
+        run: echo ${{ inputs.run_job }}
       - run: echo  ${{ inputs.custom_message }} 
